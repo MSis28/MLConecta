@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEC Game Center | ML Conecta+</title>
+  <meta name="description" content="Consolas, videojuegos, accesorios gaming y tecnología. Tu tienda gamer en Chincha." />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/tec.css" />
+</head>
+
+<body>
+  <header>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div class="logo-badge">🎮 TEC Game Center</div>
+        <div style="text-align:left">
+          <div style="font-weight:700">Tecnología y Gaming</div>
+          <div style="font-size:12px;opacity:0.9">Parte de ML Conecta+</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="../index.html">← Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-gaming" style="padding:48px 24px;border-radius:16px;text-align:center;margin-bottom:40px;position:relative">
+      <div style="position:relative;z-index:1">
+        <div style="font-size:64px;margin-bottom:16px"><img src="../img/logos/LogoTECGameCenter2025.png"></div>
+        <h1 style="margin:0;font-size:clamp(28px,6vw,42px);margin-bottom:12px">TEC Game Center</h1>
+        <p style="font-size:18px;color:var(--muted);max-width:700px;margin:0 auto 24px">
+          Vive la mejor experiencia gamer. Potencia tu mundo con consolas de calidad, 
+          variedad de videojuegos y accesorios tecnológicos que te llevarán al siguiente nivel.
+        </p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+            Ver Productos
+          </button>
+          <button class="btn" onclick="contactWhats('tec')" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            💬 WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="fade-in" style="margin-bottom:40px">
+      <h2 style="text-align:center;margin-bottom:24px">Explora por Categoría</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+        <span class="category-pill active" onclick="filterProducts('all')">🎯 Todos</span>
+        <span class="category-pill" onclick="filterProducts('consolas')">🎮 Consolas</span>
+        <span class="category-pill" onclick="filterProducts('juegos')">🕹️ Juegos</span>
+        <span class="category-pill" onclick="filterProducts('accesorios')">🎧 Accesorios</span>
+        <span class="category-pill" onclick="filterProducts('tecnologia')">💻 Tecnología</span>
+      </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">Productos Destacados</h2>
+      
+      <div class="product-grid">
+        <!-- Game Stick X2 Pro -->
+        <div class="product-card" data-category="consolas">
+          <span class="product-badge">🔥 Lo más vendido</span>
+          <div style="background:linear-gradient(135deg,#667eea,#764ba2);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+            <img src="../img/productos/gamestickx2.jpeg" style="width:210px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Game Stick X2 Pro</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola de videojuegos con mandos inalámbricos a batería modelo PS2</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 180</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- U9 Pro Game Stick -->
+        <div class="product-card" data-category="consolas">
+          <span class="product-badge" style="background:linear-gradient(135deg,#10B981,#059669)">✨ Nuevo</span>
+          <div style="background:linear-gradient(135deg,#4facfe,#00f2fe);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+            <img src="../img/productos/U9progamestick.png" style="width:190px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">U9 Pro Game Stick</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola de videojuegos con mandos inalámbricos a bateria modelo PS5</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 250</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- PlayStation4 -->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+            <img src="../img/productos/playstation4.jpeg" style="width:170px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">PlayStation 4</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola original marca Sony modelo Slim en caja de 1 terabyte de almacenamiento y cables orginales</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 1000</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Playstation3-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/playstation3.jpeg" style="width:190px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">PlayStation 3</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola original marca Sony modelo Slim en caja de 500 Gigabytes de almacenamiento y cables originales</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 650</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+                <!-- Playstation2-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/playstation2.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">PlayStation 2</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola original marca Sony modelo Slim en caja y flasheada  para reproducir cualquier juego con cables originales</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 280</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Playstation1-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/playstation1.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">PlayStation 1</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola original marca Sony modelo FAT sin caja y flasheada  para reproducir cualquier juego con cables originales</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 150</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- GameStation-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/gamestation.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Game Station</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola con 428 juegos grabados de nintendo y super nintendo con conexión HDMI y 2 mandos con cables</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 90</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Game Stick Lite-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/gamesticklite.jpeg" style="width:180px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Game Stick Lite</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola con 10 mil juegos grabados de diversas consolas PSP, nintendo, super nintendo, Sega y con conexión HDMI</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 90</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Game extreme-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/consolaextreme.jpeg" style="width:170px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Consola Extreme</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola de videojuegos con mandos a pilas inalámbricos y conexión HDMI</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 100</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Consola XPLUS-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/x7plus.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Consola X7 Plus</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola portatil de diversas plataformas PSP, super nintendo, etc y de alta resolución</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 250</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Consola MiniSupere-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/handnintendo.jpeg" style="width:210px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Handheld Game Station</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola portatil con pantalla incluida y también con conexión a TV modelo super nintendo</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 200</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Consola Sup-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/sup400mano.jpeg" style="width:210px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Consola Sup 400</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola portatil con multiples juegos y también con conexión a TV, con un mando adicional</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Consola Gameboy-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/gameboyretro.jpeg" style="width:210px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Consola GameBoy</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola portatil modelo gameboy con juegos grabados y de diversas plataformas de videojuegos</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Consola dex-->
+        <div class="product-card" data-category="consolas">
+          <div style="background:linear-gradient(135deg,#f093fb,#f5576c);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/consoladexx.jpeg" style="width:170px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Consola Dex</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Consola portatil con juegos grabados de multiples plataformas modelo rectangular con jostick</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- VideoJuegos -->
+        <div class="product-card" data-category="juegos">
+          <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/juegos.avif" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">USB Videojuegos PS2</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Los últimos lanzamientos para Play Station 2 incluidos en un USB con Memory Card</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Ver catálogo</button>
+          </div>
+        </div>
+
+        <!-- Tecnologias -->
+        <div class="product-card" data-category="tecnologia">
+          <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/tabletgamer.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Tablet Gamer</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Tablet modelo gamers con parlantes incluidos y disponible para colocar chip de cualquier operador</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 220</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Ver catálogo</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="tecnologia">
+          <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/tabletlenovo.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Tablet Lenovo</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Tablet marca Lenovo de alta resolución y modelo Tab M7 con screen protector</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 300</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Ver catálogo</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="tecnologia">
+          <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/camarafoto.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Cámara Foco</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Cámara inalámbrica con foco incluido, puerto para colocar memoria SD y monitorear desde el celular</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 120</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Ver catálogo</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="tecnologia">
+          <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/camarafun.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Cámara Fun Niños</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Cámara para niños en 2 colores disponibles para grabar y tomar fotos, juegos incluidos</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 60</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Ver catálogo</button>
+          </div>
+        </div>
+
+        <!-- Auriculares Gaming -->
+        <div class="product-card" data-category="accesorios">
+          <span class="product-badge" style="background:linear-gradient(135deg,#F59E0B,#D97706)">💥 Oferta</span>
+          <div style="background:linear-gradient(135deg,#fa709a,#fee140);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/mandops3.jpeg" style="width:160px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Controles inalámbricos PS3</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Mando inalámbrico modelo God of War para PS3</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accesorios">
+          <span class="product-badge" style="background:linear-gradient(135deg,#F59E0B,#D97706)">💥 Oferta</span>
+          <div style="background:linear-gradient(135deg,#fa709a,#fee140);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/audifonofrozen.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Audifonos Frozen</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Audífonos inalámbricos modelo Frozen carga de alta duración</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accesorios">
+          <span class="product-badge" style="background:linear-gradient(135deg,#F59E0B,#D97706)">💥 Oferta</span>
+          <div style="background:linear-gradient(135deg,#fa709a,#fee140);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/camaraunicornio.jpeg" style="width:200px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Audifonos Unicornio</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Audífonos inalámbricos modelo Unicornio carga de alta duración</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Mandos PS3 -->
+        <div class="product-card" data-category="accesorios">
+          <div style="background:linear-gradient(135deg,#a8edea,#fed6e3);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/mandops33.jpeg" style="width:160px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Controles Inalámbricos PS3</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Mando inalámbrico en color negro para PS3</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 60</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+        
+        <!-- Mandos PS4 -->
+        <div class="product-card" data-category="accesorios">
+          <div style="background:linear-gradient(135deg,#a8edea,#fed6e3);height:180px;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:48px">
+          <img src="../img/productos/mandops4.jpeg" style="width:160px;height:auto">
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Controles Inalámbricos PS4</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Mando inalámbrico modelo Grand theft auto V para PS4</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">S/ 120</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('tec')">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Banner Promocional -->
+    <section id="promociones" class="fade-in" style="margin-bottom:50px">
+      <div class="promo-banner">
+        <h2 style="margin:0 0 12px;font-size:32px">🎉 Promoción Especial</h2>
+        <p style="font-size:18px;margin:0 0 20px">Compra tu consola y llévate 2 juegos GRATIS</p>
+        <button class="btn" onclick="contactWhats('tec')" style="background:white;color:var(--primary)">
+          Consultar Promoción
+        </button>
+      </div>
+    </section>
+
+        <!-- Por qué elegirnos -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">¿Por qué TEC Game Center?</h2>
+      
+      <div class="grid-2">
+        <div class="card">
+          <div style="font-size:48px;margin-bottom:16px">✅</div>
+          <h3>Productos Originales</h3>
+          <p class="muted">Garantía oficial en todas nuestras consolas y juegos</p>
+        </div>
+        
+        <div class="card">
+          <div style="font-size:48px;margin-bottom:16px">💰</div>
+          <h3>Mejores Precios</h3>
+          <p class="muted">Precios competitivos y facilidades de pago</p>
+        </div>
+        
+        <div class="card">
+          <div style="font-size:48px;margin-bottom:16px">🚀</div>
+          <h3>Entrega Rápida</h3>
+          <p class="muted">Delivery express en Chincha Alta</p>
+        </div>
+        
+        <div class="card">
+          <div style="font-size:48px;margin-bottom:16px">🎮</div>
+          <h3>Expertos Gamers</h3>
+          <p class="muted">Atención por personas apasionadas por el gaming</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">Nuestros Servicios</h2>
+      
+      <div class="grid-3">
+        <div class="stat-box">
+          <h4>🔧 Reparación y Mantenimiento</h4>
+          <p class="muted" style="margin:0">Servicio técnico especializado para consolas y equipos gaming</p>
+        </div>
+        
+        <div class="stat-box">
+          <h4>🎯 Asesoría Personalizada</h4>
+          <p class="muted" style="margin:0">Te ayudamos a elegir el mejor setup gaming para ti</p>
+        </div>
+        
+        <div class="stat-box">
+          <h4>📦 Delivery Local</h4>
+          <p class="muted" style="margin:0">Entrega rápida en Chincha y alrededores</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo PDF -->
+    <section id="catalog-pdf-section" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:24px">🎮 Catálogo Tecnológico</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto">
+        Explora nuestro catálogo completo con todas las consolas, juegos y accesorios disponibles.
+      </p>
+      
+      <div class="card" style="padding:0;overflow:hidden;max-width:900px;margin:0 auto">
+        <!-- Encabezado del catálogo -->
+        <div style="background:linear-gradient(135deg,var(--primary),var(--secondary));padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div style="color:white;font-weight:700;font-size:16px">
+            📄 Catálogo TEC Game Center 2025
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn" onclick="document.getElementById('catalog-pdf').requestFullscreen()" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px">
+              🔍 Pantalla Completa
+            </button>
+            <a href="../img/catalogo-tec.pdf" download class="btn" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px;display:inline-flex;align-items:center">
+              ⬇️ Descargar PDF
+            </a>
+          </div>
+        </div>
+        
+        <!-- Visor PDF sin sidebar -->
+        <div id="catalog-pdf" style="background:#1E293B;position:relative">
+          <iframe 
+            src="../img/catalogo-tec.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
+            style="width:100%;height:700px;border:none;display:block"
+            title="Catálogo TEC Game Center"
+            loading="lazy">
+          </iframe>
+          
+          <!-- Mensaje alternativo si el PDF no carga -->
+          <noscript>
+            <div style="padding:40px;text-align:center">
+              <p style="color:var(--muted);margin-bottom:16px">Tu navegador no puede mostrar el PDF.</p>
+              <a href="../img/catalogo-tec.pdf" download class="btn">Descargar Catálogo</a>
+            </div>
+          </noscript>
+        </div>
+        
+        <!-- Instrucciones -->
+        <div style="background:var(--bg-light);padding:16px;text-align:center">
+          <p class="small" style="margin:0;color:var(--muted)">
+            💡 <strong>Tip:</strong> Usa los controles del visor para navegar entre páginas y hacer zoom
+          </p>
+        </div>
+      </div>
+      
+      <!-- Botón de contacto después del catálogo -->
+      <div style="text-align:center;margin-top:24px">
+        <p style="color:var(--muted);margin-bottom:16px">¿Viste algo que te gustó?</p>
+        <button class="btn" onclick="contactWhats('tec')" style="font-size:16px">
+          💬 Consultar Disponibilidad
+        </button>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="fade-in" style="margin-bottom:60px">
+      <div class="card" style="max-width:600px;margin:0 auto;text-align:center;padding:32px">
+        <h2 style="margin:0 0 16px">Contáctanos</h2>
+        <p class="muted" style="margin-bottom:24px">
+          ¿Tienes preguntas? Estamos aquí para ayudarte a encontrar tu setup gaming perfecto.
+        </p>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto">
+          <button class="btn" onclick="contactWhats('tec')" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            💬 WhatsApp
+          </button>
+          <button class="btn" onclick="window.location.href='../index.html#contacto'">
+            📧 Formulario de Contacto
+          </button>
+        </div>
+        
+        <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(124,58,237,0.2)">
+          <p class="small" style="margin:0">
+            📍 <strong>Ubicación:</strong> Chincha Alta<br>
+            ⏰ <strong>Horario:</strong> Lun - Sáb: 9:00 AM - 8:00 PM
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Flotante -->
+  <button aria-label="WhatsApp" class="whatsapp-btn" onclick="contactWhats('tec')">
+    💬 WhatsApp
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-weight:700;font-size:18px;margin-bottom:12px">
+        🎮 TEC Game Center - ML Conecta+
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#promociones">Promociones</a>
+        <a href="../index.html#negocios">Otros Negocios</a>
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;color:#94a3b8">
+        © 2025 TEC Game Center - Familia Moquillaza Levano
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script>
+    // Filtro de productos
+    function filterProducts(category) {
+      const pills = document.querySelectorAll('.category-pill');
+      const products = document.querySelectorAll('.product-card');
+      
+      pills.forEach(pill => pill.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

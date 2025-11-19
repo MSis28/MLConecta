@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J & M Moda Kids - Estilo Infantil con Actitud | ML Conecta+</title>
+  <meta name="description" content="Moda infantil trendy y cómoda. Ropa de temporada, conjuntos, calzado y accesorios para niños y niñas en Chincha Alta." />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/jm.css" />
+</head>
+
+<body>
+  <header>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div class="logo-badge">👕 J & M Moda Kids</div>
+        <div style="text-align:left">
+          <div style="font-weight:700">Moda Infantil con Estilo</div>
+          <div style="font-size:12px;opacity:0.9">Parte de ML Conecta+</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="../index.html">← Inicio</a>
+        <a href="#productos">Colecciones</a>
+        <a href="#tallas">Por Talla</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-moda" style="padding:48px 24px;text-align:center;margin-bottom:40px;position:relative">
+      <div style="position:relative;z-index:1">
+        <div style="font-size:64px;margin-bottom:16px">👕</div>
+        <h1 style="margin:0;font-size:clamp(28px,6vw,42px);margin-bottom:12px">J & M Moda Kids</h1>
+        <p style="font-size:18px;color:var(--muted);max-width:700px;margin:0 auto 24px">
+          Estilo, comodidad y calidad para los más pequeños. Descubre las últimas tendencias en 
+          moda infantil: ropa de temporada, conjuntos fashion, calzado cómodo y accesorios trendy.
+        </p>
+        <div style="margin-bottom:20px">
+          <span class="collection-tag">✨ Nueva Colección 2025</span>
+          <span class="collection-tag" style="background:var(--accent);margin-left:8px">🔥 Envíos a Domicilio</span>
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+            Ver Colección
+          </button>
+          <button class="btn btn-secondary" onclick="contactWhats('jm')" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            💬 WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="fade-in" style="margin-bottom:40px">
+      <h2 style="text-align:center;margin-bottom:24px">👗 Explora por Categoría</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+        <span class="category-pill active" onclick="filterProducts('all')">✨ Todos</span>
+        <span class="category-pill" onclick="filterProducts('ninas')">👧 Niñas</span>
+        <span class="category-pill" onclick="filterProducts('ninos')">👦 Niños</span>
+        <span class="category-pill" onclick="filterProducts('bebes')">👶 Bebés</span>
+        <span class="category-pill" onclick="filterProducts('calzado')">👟 Calzado</span>
+      </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">💖 Lo Más Trendy</h2>
+      
+      <div class="product-grid">
+        <!-- Vestidos Niñas -->
+        <div class="product-card" data-category="ninas">
+          <span class="category-badge">👧 Niñas</span>
+          <span class="new-badge">NUEVO</span>
+          <div style="background:linear-gradient(135deg,#FDB9C8,#F9A8D4);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👗
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Vestidos de Temporada</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Diseños exclusivos, colores vibrantes</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">2</span>
+            <span class="size-pill">4</span>
+            <span class="size-pill">6</span>
+            <span class="size-pill">8</span>
+            <span class="size-pill">10</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 45</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Polos Niños -->
+        <div class="product-card" data-category="ninos">
+          <span class="category-badge trendy">👦 Niños</span>
+          <div style="background:linear-gradient(135deg,#A7F3D0,#6EE7B7);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👕
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Polos y Camisetas</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">100% algodón, estampados modernos</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">4</span>
+            <span class="size-pill">6</span>
+            <span class="size-pill">8</span>
+            <span class="size-pill">10</span>
+            <span class="size-pill">12</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 25</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Conjuntos -->
+        <div class="product-card" data-category="ninas">
+          <span class="category-badge">👧 Niñas</span>
+          <div style="background:linear-gradient(135deg,#FDE68A,#FCA5A5);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👚
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Conjuntos de 2 Piezas</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Top + short/pantalón coordinados</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">2</span>
+            <span class="size-pill">4</span>
+            <span class="size-pill">6</span>
+            <span class="size-pill">8</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 55</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Shorts Niños -->
+        <div class="product-card" data-category="ninos">
+          <span class="category-badge trendy">👦 Niños</span>
+          <div style="background:linear-gradient(135deg,#93C5FD,#BFDBFE);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🩳
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Shorts Deportivos</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Cómodos y resistentes para jugar</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">4</span>
+            <span class="size-pill">6</span>
+            <span class="size-pill">8</span>
+            <span class="size-pill">10</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 30</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Ropa Bebé -->
+        <div class="product-card" data-category="bebes">
+          <span class="category-badge">👶 Bebés</span>
+          <span class="new-badge">NUEVO</span>
+          <div style="background:linear-gradient(135deg,#FED7AA,#FBBF24);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👶
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Bodies y Enterizos</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Suaves, prácticos, diseños adorables</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">0-3m</span>
+            <span class="size-pill">3-6m</span>
+            <span class="size-pill">6-12m</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 35</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Calzado -->
+        <div class="product-card" data-category="calzado">
+          <span class="category-badge">👟 Calzado</span>
+          <div style="background:linear-gradient(135deg,#C4B5FD,#DDD6FE);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👟
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Zapatillas Deportivas</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Ligeras, antideslizantes, varios colores</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">20</span>
+            <span class="size-pill">22</span>
+            <span class="size-pill">24</span>
+            <span class="size-pill">26</span>
+            <span class="size-pill">28</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 65</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Accesorios -->
+        <div class="product-card" data-category="ninas">
+          <span class="category-badge">✨ Accesorios</span>
+          <div style="background:linear-gradient(135deg,#F0ABFC,#F9A8D4);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🎀
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Accesorios Fashion</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Diademas, cintas, gorros y más</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">Único</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 15</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Pijamas -->
+        <div class="product-card" data-category="all">
+          <span class="category-badge">🌙 Pijamas</span>
+          <div style="background:linear-gradient(135deg,#A7F3D0,#6EE7B7);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🌙
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Pijamas Cómodos</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:8px">Suaves, frescos, diseños divertidos</p>
+          <div style="margin-bottom:12px">
+            <span class="size-pill">2</span>
+            <span class="size-pill">4</span>
+            <span class="size-pill">6</span>
+            <span class="size-pill">8</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 40</div>
+            <button class="btn" style="padding:8px 16px;font-size:12px" onclick="contactWhats('jm')">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guía de Tallas -->
+    <section id="tallas" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">📏 Guía de Tallas</h2>
+      
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4>👶 Bebés (0-24 meses)</h4>
+          <p>0-3m, 3-6m, 6-12m, 12-18m, 18-24m</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--accent)">
+          <h4>👧👦 Niños (2-12 años)</h4>
+          <p>Tallas: 2, 4, 6, 8, 10, 12</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--secondary)">
+          <h4>👟 Calzado (Tallas EU)</h4>
+          <p>18, 20, 22, 24, 26, 28, 30, 32, 34</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--primary)">
+          <h4>💡 Consejos de Compra</h4>
+          <p>Mide al niño antes de comprar. Consulta dudas por WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo PDF -->
+    <section id="catalog-pdf-section" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:24px">📚 Catálogo de Moda 2025</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto">
+        Descubre toda nuestra colección con fotos, precios y tallas disponibles.
+      </p>
+      
+      <div class="card" style="padding:0;overflow:hidden;max-width:900px;margin:0 auto">
+        <div style="background:linear-gradient(135deg,var(--primary),var(--accent));padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div style="color:white;font-weight:700;font-size:16px">
+            📄 Catálogo J & M Moda Kids 2025
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn" onclick="document.getElementById('catalog-pdf').requestFullscreen()" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px">
+              🔍 Pantalla Completa
+            </button>
+            <a href="../img/catalogo-jm.pdf" download class="btn" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px;display:inline-flex;align-items:center">
+              ⬇️ Descargar PDF
+            </a>
+          </div>
+        </div>
+        
+        <div id="catalog-pdf" style="background:#fff7ed;position:relative">
+          <iframe 
+            src="../img/catalogo-jm.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
+            style="width:100%;height:700px;border:none;display:block"
+            title="Catálogo J & M Moda Kids"
+            loading="lazy">
+          </iframe>
+          
+          <noscript>
+            <div style="padding:40px;text-align:center">
+              <p style="color:var(--muted);margin-bottom:16px">Tu navegador no puede mostrar el PDF.</p>
+              <a href="../img/catalogo-jm.pdf" download class="btn">Descargar Catálogo</a>
+            </div>
+          </noscript>
+        </div>
+        
+        <div style="background:var(--bg-light);padding:16px;text-align:center">
+          <p class="small" style="margin:0;color:var(--muted)">
+            💡 <strong>Tip:</strong> Pregunta por disponibilidad de tallas y colores específicos
+          </p>
+        </div>
+      </div>
+      
+      <div style="text-align:center;margin-top:24px">
+        <p style="color:var(--muted);margin-bottom:16px">¿Te gustó algo? ¡Pregunta por disponibilidad!</p>
+        <button class="btn" onclick="contactWhats('jm')" style="font-size:16px">
+          💬 Consultar Disponibilidad
+        </button>
+      </div>
+    </section>
+
+    <!-- Banner Promocional -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <div class="promo-banner">
+        <h2 style="margin:0 0 12px">✨ Nueva Colección Primavera-Verano</h2>
+        <p style="font-size:20px;margin:0 0 8px">¡Renueva el guardarropa de tus pequeños!</p>
+        <p style="font-size:15px;margin:0 0 24px;opacity:0.95">Descuentos especiales en compras mayores a S/ 100</p>
+        <button class="btn" onclick="contactWhats('jm')" style="background:white;color:var(--primary);font-size:17px;padding:14px 28px">
+          Ver Colección
+        </button>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">💖 ¿Por qué J & M Moda Kids?</h2>
+      
+      <div class="grid-2">
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">✨</div>
+            <div>
+              <h3 style="margin:0 0 8px">Diseños Exclusivos</h3>
+              <p class="muted" style="margin:0">Ropa trendy que no encuentras en otros lados</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">🌟</div>
+            <div>
+              <h3 style="margin:0 0 8px">Calidad Premium</h3>
+              <p class="muted" style="margin:0">Telas suaves, resistentes y duraderas</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">💰</div>
+            <div>
+              <h3 style="margin:0 0 8px">Precios Accesibles</h3>
+              <p class="muted" style="margin:0">Moda de calidad sin gastar de más</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">🚚</div>
+            <div>
+              <h3 style="margin:0 0 8px">Envíos a Domicilio</h3>
+              <p class="muted" style="margin:0">Compra cómodo desde casa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="fade-in" style="margin-bottom:60px">
+      <div class="card" style="max-width:600px;margin:0 auto;text-align:center;padding:32px">
+        <h2 style="margin:0 0 16px">👗 ¡Visítanos o Contáctanos!</h2>
+        <p class="muted" style="margin-bottom:24px">
+          Tenemos la moda perfecta para tu pequeño. ¡Consulta por tallas, colores y disponibilidad!
+        </p>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto">
+          <button class="btn" onclick="contactWhats('jm')">
+            💬 WhatsApp
+          </button>
+          <button class="btn btn-secondary" onclick="window.location.href='../index.html#contacto'">
+            📧 Formulario de Contacto
+          </button>
+        </div>
+        
+        <div style="margin-top:24px;padding-top:24px;border-top:2px solid rgba(219,39,119,0.2)">
+          <p class="small" style="margin:0;line-height:1.8">
+            📍 <strong>Ubicación:</strong> Chincha Alta<br>
+            ⏰ <strong>Horario:</strong> Lun - Sáb: 9:00 AM - 7:30 PM<br>
+            👗 <strong>Especialidad:</strong> Moda infantil 0-12 años
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Flotante -->
+  <button aria-label="WhatsApp" class="whatsapp-btn" onclick="contactWhats('jm')">
+    💬 WhatsApp
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-weight:700;font-size:18px;margin-bottom:12px">
+        👕 J & M Moda Kids - ML Conecta+
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="#productos">Colecciones</a>
+        <a href="#tallas">Guía de Tallas</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="../index.html#negocios">Otros Negocios</a>
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;opacity:0.9">
+        © 2025 J & M Moda Kids - Familia Moquillaza Levano
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script>
+    function filterProducts(category) {
+      const pills = document.querySelectorAll('.category-pill');
+      const products = document.querySelectorAll('.product-card');
+      
+      pills.forEach(pill => pill.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

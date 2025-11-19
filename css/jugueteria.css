@@ -1,0 +1,385 @@
+/* ============================================
+   JUGUETERÍA DKARMEN - PALETA INFANTIL
+   Juguetes, Diversión y Aprendizaje
+   ============================================ */
+
+:root {
+  /* Colores Infantiles y Alegres */
+  --primary: #F472B6;      /* Rosa caramelo */
+  --secondary: #FBBF24;    /* Amarillo alegre */
+  --accent: #8B5CF6;       /* Púrpura dulce */
+  --bg: #FFF7ED;           /* Crema suave */
+  --bg-light: #FEF3C7;     /* Amarillo pastel */
+  --card: #FFFFFF;         /* Blanco limpio */
+  --text: #92400E;         /* Marrón chocolate */
+  --muted: #78350F;        /* Marrón oscuro */
+  --blue: #F472B6;         /* Compatibilidad */
+  --orange: #FBBF24;       /* Compatibilidad */
+  --success: #10B981;      /* Verde alegre */
+}
+
+/* Body con fondo cálido */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header colorido con degradado alegre */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.3);
+}
+
+/* Títulos con sombra suave */
+h1, h2, h3 {
+  color: var(--text);
+  text-shadow: 2px 2px 4px rgba(251, 191, 36, 0.2);
+}
+
+/* Cards con bordes redondeados y sombra suave */
+.card {
+  background: var(--card);
+  border: 2px solid rgba(244, 114, 182, 0.2);
+  box-shadow: 0 8px 24px rgba(244, 114, 182, 0.15);
+  border-radius: 20px;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 12px 40px rgba(244, 114, 182, 0.3);
+  transform: translateY(-8px) rotate(1deg);
+}
+
+/* Card del catálogo PDF sin rotación */
+#catalog-pdf-section .card:hover {
+  transform: translateY(-8px);
+}
+
+/* Botones coloridos y juguetones */
+.btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 4px 15px rgba(244, 114, 182, 0.3);
+  border-radius: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 25px rgba(244, 114, 182, 0.5);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Links con colores alegres */
+a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Inputs con bordes suaves */
+input, textarea, select {
+  background: var(--card);
+  border: 2px solid rgba(244, 114, 182, 0.3);
+  color: var(--text);
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(120, 53, 15, 0.5);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.15);
+  background: white;
+}
+
+/* Footer alegre */
+footer {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-top: 3px solid var(--secondary);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-links a:hover {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Hero con burbujas flotantes */
+.hero-jugueteria {
+  background: linear-gradient(135deg, 
+    rgba(244, 114, 182, 0.15) 0%, 
+    rgba(251, 191, 36, 0.15) 50%,
+    rgba(139, 92, 246, 0.15) 100%);
+  border: 3px solid rgba(244, 114, 182, 0.3);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-jugueteria::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(251, 191, 36, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+
+/* Badges de edad con iconos */
+.age-badge {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+  border: 2px solid white;
+}
+
+/* Grid de productos con animación */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Cards de productos juguetones */
+.product-card {
+  background: var(--card);
+  border: 3px solid rgba(244, 114, 182, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '✨';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  opacity: 0;
+  transform: scale(0) rotate(-45deg);
+  transition: all 0.4s ease;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.product-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(244, 114, 182, 0.3);
+}
+
+/* Precio con estilo divertido */
+.price {
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(139, 92, 246, 0.2);
+  display: inline-block;
+}
+
+.price::before {
+  content: '🎈 ';
+  font-size: 20px;
+}
+
+/* Categorías por edad */
+.category-pill {
+  background: white;
+  border: 3px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.category-pill:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-4px) rotate(-2deg);
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.4);
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Sección de características */
+.feature-box {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(244, 114, 182, 0.1));
+  border-left: 5px solid var(--secondary);
+  padding: 20px;
+  margin: 16px 0;
+  border-radius: 15px;
+  position: relative;
+}
+
+.feature-box::before {
+  content: '⭐';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 32px;
+  opacity: 0.3;
+}
+
+.feature-box h4 {
+  color: var(--primary);
+  margin: 0 0 10px 45px;
+  font-size: 20px;
+}
+
+.feature-box p {
+  margin: 0 0 0 45px;
+  color: var(--muted);
+}
+
+/* Banner promocional alegre */
+.promo-banner {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 32px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(244, 114, 182, 0.4);
+  position: relative;
+  overflow: hidden;
+  border: 4px solid white;
+}
+
+.promo-banner::before {
+  content: '🎉';
+  position: absolute;
+  font-size: 150px;
+  opacity: 0.1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+
+.promo-banner h2 {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estrellitas decorativas */
+.stars {
+  color: var(--secondary);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+/* Efectos de confeti */
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100px) rotate(360deg); opacity: 0; }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  animation: confetti 3s ease-out infinite;
+}
+
+/* Scrollbar colorido */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+  border: 2px solid var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--accent), var(--primary));
+}
+
+/* Selección colorida */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Etiquetas de descuento */
+.discount-badge {
+  background: #EF4444;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 900;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  transform: rotate(-5deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  
+  .price {
+    font-size: 22px;
+  }
+  
+  .hero-jugueteria {
+    border-radius: 20px;
+    padding: 24px 16px;
+  }
+}

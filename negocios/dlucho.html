@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DLucho Descartables - Soluciones para tu Negocio | ML Conecta+</title>
+  <meta name="description" content="Productos descartables de calidad para restaurantes, eventos y negocios. Vasos, platos, cubiertos y envases en Pueblo Nuevo." />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/dlucho.css" />
+</head>
+
+<body>
+  <header>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div class="logo-badge">🍽️ DLucho Descartables</div>
+        <div style="text-align:left">
+          <div style="font-weight:700">Soluciones para tu Negocio</div>
+          <div style="font-size:12px;opacity:0.9">Parte de ML Conecta+</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="../index.html">← Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#mayoreo">Al Por Mayor</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-descartables" style="padding:48px 24px;text-align:center;margin-bottom:40px;position:relative">
+      <div style="position:relative;z-index:1">
+        <div style="font-size:64px;margin-bottom:16px">🍽️</div>
+        <h1 style="margin:0;font-size:clamp(28px,6vw,42px);margin-bottom:12px">DLucho Descartables</h1>
+        <p style="font-size:18px;color:var(--muted);max-width:700px;margin:0 auto 24px">
+          Tu proveedor confiable de productos descartables desde 2020. Vasos, platos, cubiertos, 
+          envases para delivery y todo lo que tu evento necesita.
+        </p>
+        <div style="margin-bottom:20px">
+          <span class="wholesale-badge">✅ Venta al mejor precio</span>
+          <span class="wholesale-badge" style="background:var(--accent);margin-left:8px">🚚 Delivery Disponible</span>
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+            Ver Productos
+          </button>
+          <button class="btn btn-secondary" onclick="contactWhats('dlucho')" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            💬 WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="fade-in" style="margin-bottom:40px">
+      <h2 style="text-align:center;margin-bottom:24px">🎯 Busca por Categoría</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+        <span class="category-pill active" onclick="filterProducts('all')">📦 Todos</span>
+        <span class="category-pill" onclick="filterProducts('vasos')">🥤 Vasos</span>
+        <span class="category-pill" onclick="filterProducts('platos')">🍽️ Platos</span>
+        <span class="category-pill" onclick="filterProducts('cubiertos')">🍴 Cubiertos</span>
+        <span class="category-pill" onclick="filterProducts('envases')">📦 Envases</span>
+      </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">🌟 Productos Más Vendidos</h2>
+      
+      <div class="product-grid">
+        <!-- Vasos Descartables -->
+        <div class="product-card" data-category="vasos">
+          <span class="category-badge">🥤 Vasos</span>
+          <div style="background:linear-gradient(135deg,#D1FAE5,#A7F3D0);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🥤
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Vasos Descartables</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">7 oz, 9 oz, 12 oz, 16 oz disponibles</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Desde</div>
+              <div class="price">S/ 2</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Platos Descartables -->
+        <div class="product-card" data-category="platos">
+          <span class="category-badge premium">🍽️ Platos</span>
+          <span class="discount-badge">-15%</span>
+          <div style="background:linear-gradient(135deg,#DBEAFE,#BFDBFE);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🍽️
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Platos Descartables</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Biodegradables, varios tamaños</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Desde</div>
+              <div class="price">S/ 4</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Cubiertos -->
+        <div class="product-card" data-category="cubiertos">
+          <span class="category-badge">🍴 Cubiertos</span>
+          <div style="background:linear-gradient(135deg,#FEF3C7,#FDE68A);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🍴
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Set de Cubiertos</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Tenedor, cuchillo, cuchara</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Paquete x100</div>
+              <div class="price">S/ 2.50</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Envases para Delivery -->
+        <div class="product-card" data-category="envases">
+          <span class="category-badge urgent">📦 Envases</span>
+          <div style="background:linear-gradient(135deg,#FEE2E2,#FECACA);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            📦
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Envases para Delivery</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Herméticos, resistentes, eco-friendly</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Desde</div>
+              <div class="price">S/ 8</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Servilletas -->
+        <div class="product-card" data-category="all">
+          <span class="category-badge premium">🧻 Servilletas</span>
+          <div style="background:linear-gradient(135deg,#E0E7FF,#C7D2FE);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🧻
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Servilletas de Papel</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Alta absorción, varios colores</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Paquete x500</div>
+              <div class="price">S/ 1</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Bolsas Plásticas -->
+        <div class="product-card" data-category="envases">
+          <span class="category-badge">📦 Bolsas</span>
+          <div style="background:linear-gradient(135deg,#F3E8FF,#E9D5FF);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👜
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Bolsas Plásticas</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Varios tamaños y calibres</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Kg</div>
+              <div class="price">S/ 5</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Tapas -->
+        <div class="product-card" data-category="vasos">
+          <span class="category-badge">🥤 Vasos</span>
+          <div style="background:linear-gradient(135deg,#FED7AA,#FDBA74);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🔝
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Vasos acrílicos</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Desde 2 onzas, 4 onzas, 6 onzas, etc.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Paquete x25</div>
+              <div class="price">S/ 4</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+
+        <!-- Sorbetes -->
+        <div class="product-card" data-category="all">
+          <span class="category-badge">🥤 Sorbetes</span>
+          <div style="background:linear-gradient(135deg,#FEE2E2,#FCA5A5);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🥢
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Sorbetes</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Plástico y biodegradables</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="price-label">Paquete x500</div>
+              <div class="price">S/ 1</div>
+            </div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dlucho')">Cotizar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ventajas Al Por Mayor -->
+    <section id="mayoreo" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">📊 Ventajas de Comprar Al Por Mayor</h2>
+      
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4>💰 Mejores Precios</h4>
+          <p>Descuentos progresivos según cantidad. Ahorra hasta 25% comprando al por mayor.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--secondary)">
+          <h4>🚚 Delivery Gratis</h4>
+          <p>Envío sin costo en compras mayores a S/ 200 en Pueblo Nuevo y alrededores.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--accent)">
+          <h4>📅 Crédito Disponible</h4>
+          <p>Facilidades de pago para clientes frecuentes y negocios establecidos.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--success)">
+          <h4>⚡ Stock Permanente</h4>
+          <p>Inventario amplio y disponibilidad inmediata de todos nuestros productos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo PDF -->
+    <section id="catalog-pdf-section" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:24px">📚 Catálogo Completo de Productos</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto">
+        Descarga nuestro catálogo con lista completa de productos, precios al por mayor y promociones especiales.
+      </p>
+      
+      <div class="card" style="padding:0;overflow:hidden;max-width:900px;margin:0 auto">
+        <div style="background:linear-gradient(135deg,var(--primary),var(--secondary));padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div style="color:white;font-weight:700;font-size:16px">
+            📄 Catálogo DLucho Descartables 2025
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn" onclick="document.getElementById('catalog-pdf').requestFullscreen()" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px">
+              🔍 Pantalla Completa
+            </button>
+            <a href="../img/catalogo-dlucho.pdf" download class="btn" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px;display:inline-flex;align-items:center">
+              ⬇️ Descargar PDF
+            </a>
+          </div>
+        </div>
+        
+        <div id="catalog-pdf" style="background:#f5f5f5;position:relative">
+          <iframe 
+            src="../img/catalogo-dlucho.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
+            style="width:100%;height:700px;border:none;display:block"
+            title="Catálogo DLucho Descartables"
+            loading="lazy">
+          </iframe>
+          
+          <noscript>
+            <div style="padding:40px;text-align:center">
+              <p style="color:var(--muted);margin-bottom:16px">Tu navegador no puede mostrar el PDF.</p>
+              <a href="../img/catalogo-dlucho.pdf" download class="btn">Descargar Catálogo</a>
+            </div>
+          </noscript>
+        </div>
+        
+        <div style="background:var(--bg-light);padding:16px;text-align:center">
+          <p class="small" style="margin:0;color:var(--muted)">
+            💡 <strong>Tip:</strong> Consulta precios especiales al por mayor directamente por WhatsApp
+          </p>
+        </div>
+      </div>
+      
+      <div style="text-align:center;margin-top:24px">
+        <p style="color:var(--muted);margin-bottom:16px">¿Listo para hacer tu pedido?</p>
+        <button class="btn" onclick="contactWhats('dlucho')" style="font-size:16px">
+          💬 Cotizar Al Por Mayor
+        </button>
+      </div>
+    </section>
+
+    <!-- Banner Promocional -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <div class="promo-banner">
+        <h2 style="margin:0 0 12px;font-size:32px">🎉 Promoción Especial Negocios</h2>
+        <p style="font-size:18px;margin:0 0 8px">Compra por S/ 300 o más y recibe 10% de descuento adicional</p>
+        <p style="font-size:14px;margin:0 0 20px;opacity:0.9">Válido para todo tipo de productos</p>
+        <button class="btn btn-urgent" onclick="contactWhats('dlucho')" style="background:white;color:var(--accent);font-size:16px">
+          Aprovechar Oferta
+        </button>
+      </div>
+    </section>
+
+    <!-- Clientes -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">🤝 Nuestros Clientes</h2>
+      
+      <div class="grid-3">
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">🍔</div>
+          <h3>Restaurantes</h3>
+          <p class="muted">Soluciones completas para tu local</p>
+        </div>
+        
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">🎉</div>
+          <h3>Eventos</h3>
+          <p class="muted">Todo para fiestas y celebraciones</p>
+        </div>
+        
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">🏪</div>
+          <h3>Negocios</h3>
+          <p class="muted">Mayoristas y distribuidores</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">✅ ¿Por qué DLucho Descartables?</h2>
+      
+      <div class="grid-2">
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">✅</div>
+            <div>
+              <h3 style="margin:0 0 8px">Calidad Garantizada</h3>
+              <p class="muted" style="margin:0">Productos certificados y aprobados para uso alimentario</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">💰</div>
+            <div>
+              <h3 style="margin:0 0 8px">Precios Competitivos</h3>
+              <p class="muted" style="margin:0">Los mejores precios del mercado en compras al por mayor</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">🚚</div>
+            <div>
+              <h3 style="margin:0 0 8px">Entrega Rápida</h3>
+              <p class="muted" style="margin:0">Delivery en el mismo día para Pueblo Nuevo</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:start;gap:16px">
+            <div style="font-size:48px;flex-shrink:0">🌱</div>
+            <div>
+              <h3 style="margin:0 0 8px">Opciones Eco-Friendly</h3>
+              <p class="muted" style="margin:0">Productos biodegradables y amigables con el ambiente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="fade-in" style="margin-bottom:60px">
+      <div class="card" style="max-width:600px;margin:0 auto;text-align:center;padding:32px">
+        <h2 style="margin:0 0 16px">📞 Solicita tu Cotización</h2>
+        <p class="muted" style="margin-bottom:24px">
+          Contáctanos para cotizaciones personalizadas y precios especiales al por mayor.
+        </p>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto">
+          <button class="btn" onclick="contactWhats('dlucho')">
+            💬 WhatsApp
+          </button>
+          <button class="btn btn-secondary" onclick="window.location.href='../index.html#contacto'">
+            📧 Formulario de Contacto
+          </button>
+        </div>
+        
+        <div style="margin-top:24px;padding-top:24px;border-top:2px solid rgba(5,150,105,0.2)">
+          <p class="small" style="margin:0;line-height:1.8">
+            📍 <strong>Ubicación:</strong> Pueblo Nuevo<br>
+            ⏰ <strong>Horario:</strong> Lun - Sáb: 8:00 AM - 6:30 PM<br>
+            📦 <strong>Especialidad:</strong> Venta al por mayor y menor
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Flotante -->
+  <button aria-label="WhatsApp" class="whatsapp-btn" onclick="contactWhats('dlucho')">
+    💬 WhatsApp
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-weight:700;font-size:18px;margin-bottom:12px">
+        🍽️ DLucho Descartables - ML Conecta+
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#mayoreo">Al Por Mayor</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="../index.html#negocios">Otros Negocios</a>
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;opacity:0.9">
+        © 2025 DLucho Descartables - Familia Moquillaza Levano
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script>
+    function filterProducts(category) {
+      const pills = document.querySelectorAll('.category-pill');
+      const products = document.querySelectorAll('.product-card');
+      
+      pills.forEach(pill => pill.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juguetería DKarmen - Diversión y Aprendizaje | ML Conecta+</title>
+  <meta name="description" content="Juguetes educativos, peluches, juegos de mesa y más. ¡Diversión garantizada para todas las edades en Pueblo Nuevo!" />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/jugueteria.css" />
+</head>
+
+<body>
+  <header>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div class="logo-badge">🧸 Juguetería DKarmen</div>
+        <div style="text-align:left">
+          <div style="font-weight:700">Diversión y Aprendizaje</div>
+          <div style="font-size:12px;opacity:0.9">Parte de ML Conecta+</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="../index.html">← Inicio</a>
+        <a href="#productos">Juguetes</a>
+        <a href="#edades">Por Edad</a>
+        <a href="#promociones">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-jugueteria" style="padding:48px 24px;text-align:center;margin-bottom:40px;position:relative">
+      <div style="position:relative;z-index:1">
+        <div style="font-size:64px;margin-bottom:16px">🧸</div>
+        <h1 style="margin:0;font-size:clamp(28px,6vw,42px);margin-bottom:12px">Juguetería DKarmen</h1>
+        <p style="font-size:18px;color:var(--muted);max-width:700px;margin:0 auto 24px">
+          ¡Donde la diversión nunca termina! Juguetes educativos, peluches adorables, 
+          juegos de mesa y regalos perfectos para hacer sonreír a los más pequeños.
+        </p>
+        <div class="stars" style="margin-bottom:20px">⭐ ⭐ ⭐ ⭐ ⭐</div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+            Ver Juguetes
+          </button>
+          <button class="btn" onclick="contactWhats('jugueteria')" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            💬 WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías por Edad -->
+    <section class="fade-in" style="margin-bottom:40px">
+      <h2 style="text-align:center;margin-bottom:24px">🎯 Busca por Edad</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+        <span class="category-pill active" onclick="filterProducts('all')">🌈 Todos</span>
+        <span class="category-pill" onclick="filterProducts('0-3')">👶 0-3 años</span>
+        <span class="category-pill" onclick="filterProducts('4-6')">🧒 4-6 años</span>
+        <span class="category-pill" onclick="filterProducts('7-12')">👦 7-12 años</span>
+        <span class="category-pill" onclick="filterProducts('13+')">🎮 13+ años</span>
+      </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">🌟 Juguetes Más Vendidos</h2>
+      
+      <div class="product-grid">
+        <!-- Peluches -->
+        <div class="product-card" data-category="0-3">
+          <span class="age-badge">👶 0-3 años</span>
+          <div style="background:linear-gradient(135deg,#FCA5A5,#FBBF24);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🧸
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Peluches Suaves</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Ositos, conejitos y más. ¡Súper suaves y abrazables!</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 25</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Bloques de Construcción -->
+        <div class="product-card" data-category="4-6">
+          <span class="age-badge" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)">🧒 4-6 años</span>
+          <span class="discount-badge">-20%</span>
+          <div style="background:linear-gradient(135deg,#A78BFA,#F472B6);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🧱
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Bloques de Construcción</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Estimula la creatividad y coordinación</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 45</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Muñecas -->
+        <div class="product-card" data-category="4-6">
+          <span class="age-badge" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)">🧒 4-6 años</span>
+          <div style="background:linear-gradient(135deg,#FDE68A,#FCA5A5);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            👧
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Muñecas y Accesorios</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Muñecas con vestidos y complementos</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 35</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Juegos de Mesa -->
+        <div class="product-card" data-category="7-12">
+          <span class="age-badge" style="background:linear-gradient(135deg,#10B981,#3B82F6)">👦 7-12 años</span>
+          <div style="background:linear-gradient(135deg,#6EE7B7,#93C5FD);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🎲
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Juegos de Mesa</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Diversión familiar garantizada</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 55</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Juguetes STEM -->
+        <div class="product-card" data-category="7-12">
+          <span class="age-badge" style="background:linear-gradient(135deg,#10B981,#3B82F6)">👦 7-12 años</span>
+          <span class="discount-badge">¡NUEVO!</span>
+          <div style="background:linear-gradient(135deg,#34D399,#60A5FA);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🔬
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Juguetes STEM</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Ciencia, tecnología y aprendizaje</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 75</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Rompecabezas -->
+        <div class="product-card" data-category="4-6">
+          <span class="age-badge" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)">🧒 4-6 años</span>
+          <div style="background:linear-gradient(135deg,#C4B5FD,#FBCFE8);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🧩
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Rompecabezas</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Desarrolla lógica y paciencia</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 20</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Carros a Control Remoto -->
+        <div class="product-card" data-category="7-12">
+          <span class="age-badge" style="background:linear-gradient(135deg,#10B981,#3B82F6)">👦 7-12 años</span>
+          <div style="background:linear-gradient(135deg,#FDE047,#FB923C);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🚗
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Carros a Control Remoto</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Velocidad y diversión garantizada</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 30</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Sets de Arte -->
+        <div class="product-card" data-category="4-6">
+          <span class="age-badge" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)">🧒 4-6 años</span>
+          <div style="background:linear-gradient(135deg,#F0ABFC,#FDE047);height:180px;border-radius:15px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🎨
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Sets de Arte y Manualidades</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Despierta el artista interior</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 40</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('jugueteria')">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué comprar aquí -->
+    <section id="edades" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">💝 ¿Por qué Juguetería DKarmen?</h2>
+      
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4>🎓 Juguetes Educativos</h4>
+          <p>Aprendizaje mientras juegan. Estimulamos creatividad, lógica y coordinación.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--primary)">
+          <h4>✅ Calidad Garantizada</h4>
+          <p>Productos seguros, certificados y duraderos para tranquilidad de los padres.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--accent)">
+          <h4>🎁 Regalos Perfectos</h4>
+          <p>Envolvemos tus regalos sin costo adicional. ¡Sorprende con estilo!</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--success)">
+          <h4>💰 Precios Accesibles</h4>
+          <p>La mejor relación calidad-precio. ¡Diversión para todos los presupuestos!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo PDF -->
+    <section id="catalog-pdf-section" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:24px">📚 Catálogo Completo de Productos</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto">
+        Explora nuestro catálogo completo con todos los juguetes disponibles, precios y detalles.
+      </p>
+      
+      <div class="card" style="padding:0;overflow:hidden;max-width:900px;margin:0 auto">
+        <!-- Encabezado del catálogo -->
+        <div style="background:linear-gradient(135deg,var(--primary),var(--secondary));padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div style="color:white;font-weight:700;font-size:16px">
+            📄 Catálogo Juguetería DKarmen 2025
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn" onclick="document.getElementById('catalog-pdf').requestFullscreen()" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px">
+              🔍 Pantalla Completa
+            </button>
+            <a href="../img/catalogo-jugueteria.pdf" download class="btn" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px;display:inline-flex;align-items:center">
+              ⬇️ Descargar PDF
+            </a>
+          </div>
+        </div>
+        
+        <!-- Visor PDF sin sidebar -->
+        <div id="catalog-pdf" style="background:#f5f5f5;position:relative">
+          <iframe 
+            src="../img/catalogo-jugueteria.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
+            style="width:100%;height:700px;border:none;display:block"
+            title="Catálogo Juguetería DKarmen"
+            loading="lazy">
+          </iframe>
+          
+          <!-- Mensaje alternativo si el PDF no carga -->
+          <noscript>
+            <div style="padding:40px;text-align:center">
+              <p style="color:var(--muted);margin-bottom:16px">Tu navegador no puede mostrar el PDF.</p>
+              <a href="../img/catalogo-jugueteria.pdf" download class="btn">Descargar Catálogo</a>
+            </div>
+          </noscript>
+        </div>
+        
+        <!-- Instrucciones -->
+        <div style="background:var(--bg-light);padding:16px;text-align:center">
+          <p class="small" style="margin:0;color:var(--muted)">
+            💡 <strong>Tip:</strong> Usa los controles del visor para navegar entre páginas y hacer zoom
+          </p>
+        </div>
+      </div>
+      
+      <!-- Botón de contacto después del catálogo -->
+      <div style="text-align:center;margin-top:24px">
+        <p style="color:var(--muted);margin-bottom:16px">¿Viste algo que te gustó?</p>
+        <button class="btn" onclick="contactWhats('jugueteria')" style="font-size:16px">
+          💬 Consultar Disponibilidad
+        </button>
+      </div>
+    </section>
+
+    <!-- Banner Promocional -->
+    <section id="promociones" class="fade-in" style="margin-bottom:50px">
+      <div class="promo-banner">
+        <h2 style="margin:0 0 12px;font-size:32px">🎉 Promoción de Cumpleaños</h2>
+        <p style="font-size:18px;margin:0 0 8px">Compra 3 juguetes y llévate el más barato con un super descuento</p>
+        <p style="font-size:14px;margin:0 0 20px;opacity:0.9">Válido para cumpleañeros del mes</p>
+        <button class="btn" onclick="contactWhats('jugueteria')" style="background:white;color:var(--primary);font-size:16px">
+          Consultar Promoción
+        </button>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="fade-in" style="margin-bottom:60px">
+      <div class="card" style="max-width:600px;margin:0 auto;text-align:center;padding:32px">
+        <h2 style="margin:0 0 16px">¡Visítanos!</h2>
+        <p class="muted" style="margin-bottom:24px">
+          Te esperamos con una sonrisa y los mejores juguetes para hacer felices a tus pequeños.
+        </p>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto">
+          <button class="btn" onclick="contactWhats('jugueteria')">💬 WhatsApp</button>
+          <button class="btn" onclick="window.location.href='../index.html#contacto'" style="background:linear-gradient(135deg,var(--accent),var(--primary))">
+            📧 Formulario de Contacto
+          </button>
+        </div>
+        
+        <div style="margin-top:24px;padding-top:24px;border-top:2px dashed rgba(244,114,182,0.2)">
+          <p class="small" style="margin:0;line-height:1.8">
+            📍 <strong>Ubicación:</strong> Pueblo Nuevo<br>
+            ⏰ <strong>Horario:</strong> Lun - Sáb: 9:00 AM - 7:00 PM<br>
+            🎁 <strong>Servicio:</strong> Envoltorio de regalo gratis
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Flotante -->
+  <button aria-label="WhatsApp" class="whatsapp-btn" onclick="contactWhats('jugueteria')">
+    💬 WhatsApp
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-weight:700;font-size:18px;margin-bottom:12px">
+        🧸 Juguetería DKarmen - ML Conecta+
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="#productos">Juguetes</a>
+        <a href="#edades">Por Edad</a>
+        <a href="#promociones">Ofertas</a>
+        <a href="../index.html#negocios">Otros Negocios</a>
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;opacity:0.9">
+        © 2025 Juguetería DKarmen - Familia Moquillaza Levano
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script>
+    function filterProducts(category) {
+      const pills = document.querySelectorAll('.category-pill');
+      const products = document.querySelectorAll('.product-card');
+      
+      pills.forEach(pill => pill.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

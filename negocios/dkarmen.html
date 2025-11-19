@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DKarmen Librería - Útiles Escolares y Papelería | ML Conecta+</title>
+  <meta name="description" content="Libros, útiles escolares, papelería y material educativo. Todo lo que necesitas para el colegio en Pueblo Nuevo." />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/dkarmen.css" />
+</head>
+
+<body>
+  <header>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div class="logo-badge">📚 DKarmen Librería</div>
+        <div style="text-align:left">
+          <div style="font-weight:700">Útiles Escolares y Papelería</div>
+          <div style="font-size:12px;opacity:0.9">Parte de ML Conecta+</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="../index.html">← Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#niveles">Por Nivel</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-libreria" style="padding:48px 24px;text-align:center;margin-bottom:40px;position:relative">
+      <div style="position:relative;z-index:1">
+        <div style="font-size:64px;margin-bottom:16px">📚</div>
+        <h1 style="margin:0;font-size:clamp(28px,6vw,42px);margin-bottom:12px">DKarmen Librería</h1>
+        <p style="font-size:18px;color:var(--muted);max-width:700px;margin:0 auto 24px">
+          Tu aliado educativo desde 2013. Libros de texto, útiles escolares, papelería y material didáctico 
+          de calidad para todos los niveles académicos.
+        </p>
+        <div style="margin-bottom:20px;font-size:14px;color:var(--accent);font-weight:700">
+          ⭐ Más de 10 años sirviendo a la comunidad educativa
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+            Ver Productos
+          </button>
+          <button class="btn btn-secondary" onclick="contactWhats('dkarmen')" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            💬 WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías por Nivel -->
+    <section class="fade-in" style="margin-bottom:40px">
+      <h2 style="text-align:center;margin-bottom:24px">🎯 Compra por Nivel Escolar</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+        <span class="category-pill active" onclick="filterProducts('all')">📚 Todos</span>
+        <span class="category-pill" onclick="filterProducts('inicial')">👶 Inicial</span>
+        <span class="category-pill" onclick="filterProducts('primaria')">📖 Primaria</span>
+        <span class="category-pill" onclick="filterProducts('secundaria')">🎓 Secundaria</span>
+        <span class="category-pill" onclick="filterProducts('universidad')">🏫 Universidad</span>
+      </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">🌟 Productos Destacados</h2>
+      
+      <div class="product-grid">
+        <!-- Útiles Escolares Inicial -->
+        <div class="product-card" data-category="inicial">
+          <span class="category-badge">👶 Inicial</span>
+          <div style="background:linear-gradient(135deg,#DBEAFE,#FEF3C7);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            ✏️
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Kit Útiles Inicial</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Colores, plastilina, tijeras punta roma y más</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 20</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Cuadernos -->
+        <div class="product-card" data-category="primaria">
+          <span class="category-badge">📖 Primaria</span>
+          <span class="new-badge">¡NUEVO!</span>
+          <div style="background:linear-gradient(135deg,#93C5FD,#D4D4D8);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            📓
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Cuadernos Cuadriculados</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">100 hojas, espiral, tapa dura</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 4.50</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Libros de Texto -->
+        <div class="product-card" data-category="secundaria">
+          <span class="category-badge">🎓 Secundaria</span>
+          <div style="background:linear-gradient(135deg,#86EFAC,#FDE68A);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            📕
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Libros de Texto</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Todas las materias y editoriales</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">Desde S/ 5</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Mochilas -->
+        <div class="product-card" data-category="all">
+          <span class="category-badge secondary">🎒 Todo Nivel</span>
+          <div style="background:linear-gradient(135deg,#FCA5A5,#FBBF24);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🎒
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Mochilas Escolares</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Resistentes, ergonómicas, varios diseños</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 40</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Material Didáctico -->
+        <div class="product-card" data-category="inicial">
+          <span class="category-badge">👶 Inicial</span>
+          <div style="background:linear-gradient(135deg,#C4B5FD,#FBCFE8);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🧩
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Material Didáctico</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Ábacos, rompecabezas, juegos educativos</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 30</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Set de Geometría -->
+        <div class="product-card" data-category="secundaria">
+          <span class="category-badge">🎓 Secundaria</span>
+          <div style="background:linear-gradient(135deg,#60A5FA,#34D399);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            📐
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Set de Geometría</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Regla, escuadra, transportador, compás</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 10</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Papelería Oficina -->
+        <div class="product-card" data-category="universidad">
+          <span class="category-badge">🏫 Universidad/Oficina</span>
+          <div style="background:linear-gradient(135deg,#A78BFA,#F472B6);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            📎
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Papelería Oficina</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Folders, archivadores, clips, post-its</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">Desde S/ 5</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+
+        <!-- Loncheras -->
+        <div class="product-card" data-category="primaria">
+          <span class="category-badge">📖 Primaria</span>
+          <div style="background:linear-gradient(135deg,#FDE047,#FB923C);height:180px;border-radius:12px;margin:12px 0;display:flex;align-items:center;justify-content:center;font-size:64px">
+            🍱
+          </div>
+          <h3 style="margin:12px 0 8px;color:var(--text)">Loncheras Térmicas</h3>
+          <p class="muted" style="font-size:14px;margin-bottom:12px">Mantiene alimentos frescos, varios diseños</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div class="price">S/ 25</div>
+            <button class="btn" style="padding:8px 16px;font-size:13px" onclick="contactWhats('dkarmen')">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios Adicionales -->
+    <section id="niveles" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">✨ Servicios Especiales</h2>
+      
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4>📋 Listas Escolares Completas</h4>
+          <p>Armamos tu lista de útiles según el colegio. ¡Ahorra tiempo y dinero!</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--secondary)">
+          <h4>🎨 Forrado de Libros</h4>
+          <p>Servicio de forrado profesional para proteger tus libros.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--accent)">
+          <h4>📦 Paquetes Promocionales</h4>
+          <p>Combos especiales por nivel escolar con descuentos exclusivos.</p>
+        </div>
+        
+        <div class="feature-box" style="border-left-color:var(--primary)">
+          <h4>🚚 Delivery Local</h4>
+          <p>Entrega a domicilio en Pueblo Nuevo y alrededores.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo PDF -->
+    <section id="catalog-pdf-section" class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:24px">📚 Catálogo Completo</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto">
+        Descarga o visualiza nuestro catálogo completo con todos los productos, precios y promociones.
+      </p>
+      
+      <div class="card" style="padding:0;overflow:hidden;max-width:900px;margin:0 auto">
+        <div style="background:linear-gradient(135deg,var(--primary),var(--accent));padding:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div style="color:white;font-weight:700;font-size:16px">
+            📄 Catálogo DKarmen Librería 2025
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn" onclick="document.getElementById('catalog-pdf').requestFullscreen()" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px">
+              🔍 Pantalla Completa
+            </button>
+            <a href="../img/catalogo-libreria.pdf" download class="btn" style="background:white;color:var(--primary);padding:8px 16px;font-size:13px;display:inline-flex;align-items:center">
+              ⬇️ Descargar PDF
+            </a>
+          </div>
+        </div>
+        
+        <div id="catalog-pdf" style="background:#f5f5f5;position:relative">
+          <iframe 
+            src="../img/catalogo-libreria.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
+            style="width:100%;height:700px;border:none;display:block"
+            title="Catálogo DKarmen Librería"
+            loading="lazy">
+          </iframe>
+          
+          <noscript>
+            <div style="padding:40px;text-align:center">
+              <p style="color:var(--muted);margin-bottom:16px">Tu navegador no puede mostrar el PDF.</p>
+              <a href="../img/catalogo-libreria.pdf" download class="btn">Descargar Catálogo</a>
+            </div>
+          </noscript>
+        </div>
+        
+        <div style="background:var(--bg-light);padding:16px;text-align:center">
+          <p class="small" style="margin:0;color:var(--muted)">
+            💡 <strong>Tip:</strong> Usa los controles del visor para navegar entre páginas y hacer zoom
+          </p>
+        </div>
+      </div>
+      
+      <div style="text-align:center;margin-top:24px">
+        <p style="color:var(--muted);margin-bottom:16px">¿Encontraste lo que buscabas?</p>
+        <button class="btn" onclick="contactWhats('dkarmen')" style="font-size:16px">
+          💬 Consultar Disponibilidad
+        </button>
+      </div>
+    </section>
+
+    <!-- Banner Promocional -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <div class="promo-banner">
+        <h2 style="margin:0 0 12px;font-size:32px">🎓 Campaña Escolar 2025</h2>
+        <p style="font-size:18px;margin:0 0 8px">¡Arma tu lista completa y recibe descuentos especiales!</p>
+        <p style="font-size:14px;margin:0 0 20px;opacity:0.9">Válido para compras mayores a S/ 100</p>
+        <button class="btn" onclick="contactWhats('dkarmen')" style="background:white;color:var(--primary);font-size:16px">
+          Consultar Promoción
+        </button>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">💙 ¿Por qué DKarmen Librería?</h2>
+      
+      <div class="grid-2">
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">⭐</div>
+          <h3>Más de 10 Años</h3>
+          <p class="muted">De experiencia sirviendo a la comunidad educativa</p>
+        </div>
+        
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">✅</div>
+          <h3>Productos de Calidad</h3>
+          <p class="muted">Marcas reconocidas y garantizadas</p>
+        </div>
+        
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">💰</div>
+          <h3>Precios Justos</h3>
+          <p class="muted">Los mejores precios del mercado</p>
+        </div>
+        
+        <div class="card" style="text-align:center;padding:24px">
+          <div style="font-size:56px;margin-bottom:16px">🤝</div>
+          <h3>Atención Personalizada</h3>
+          <p class="muted">Te asesoramos en lo que necesites</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="fade-in" style="margin-bottom:50px">
+      <h2 style="text-align:center;margin-bottom:32px">💬 Opiniones de Nuestros Clientes</h2>
+      
+      <div class="grid-3">
+        <div class="card" style="text-align:left;padding:20px">
+          <div style="color:var(--accent);margin-bottom:12px;font-size:18px">⭐⭐⭐⭐⭐</div>
+          <p class="muted" style="font-style:italic;margin-bottom:12px">
+            "Siempre encuentro todo lo que necesito para mis hijos. Excelente atención y buenos precios."
+          </p>
+          <strong style="color:var(--primary)">- Rosa M.</strong>
+        </div>
+        
+        <div class="card" style="text-align:left;padding:20px">
+          <div style="color:var(--accent);margin-bottom:12px;font-size:18px">⭐⭐⭐⭐⭐</div>
+          <p class="muted" style="font-style:italic;margin-bottom:12px">
+            "Me armaron toda la lista del colegio en minutos. Muy recomendado."
+          </p>
+          <strong style="color:var(--primary)">- Juan P.</strong>
+        </div>
+        
+        <div class="card" style="text-align:left;padding:20px">
+          <div style="color:var(--accent);margin-bottom:12px;font-size:18px">⭐⭐⭐⭐⭐</div>
+          <p class="muted" style="font-style:italic;margin-bottom:12px">
+            "Productos de calidad y variedad. Es mi librería de confianza desde hace años."
+          </p>
+          <strong style="color:var(--primary)">- Carmen L.</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="fade-in" style="margin-bottom:60px">
+      <div class="card" style="max-width:600px;margin:0 auto;text-align:center;padding:32px">
+        <h2 style="margin:0 0 16px">📍 Visítanos en Pueblo Nuevo</h2>
+        <p class="muted" style="margin-bottom:24px">
+          Estamos listos para ayudarte con todo lo que necesites para el año escolar.
+        </p>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto">
+          <button class="btn" onclick="contactWhats('dkarmen')">
+            💬 WhatsApp
+          </button>
+          <button class="btn" onclick="window.location.href='../index.html#contacto'" style="background:linear-gradient(135deg,var(--secondary),#DC2626)">
+            📧 Formulario de Contacto
+          </button>
+        </div>
+        
+        <div style="margin-top:24px;padding-top:24px;border-top:2px solid rgba(14,165,233,0.2)">
+          <p class="small" style="margin:0;line-height:1.8">
+            📍 <strong>Ubicación:</strong> Pueblo Nuevo<br>
+            ⏰ <strong>Horario:</strong> Lun - Sáb: 8:00 AM - 7:00 PM<br>
+            📚 <strong>Especialidad:</strong> Todo para el año escolar
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Flotante -->
+  <button aria-label="WhatsApp" class="whatsapp-btn" onclick="contactWhats('dkarmen')">
+    💬 WhatsApp
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-weight:700;font-size:18px;margin-bottom:12px">
+        📚 DKarmen Librería - ML Conecta+
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#niveles">Por Nivel</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="../index.html#negocios">Otros Negocios</a>
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;opacity:0.9">
+        © 2025 DKarmen Librería - Familia Moquillaza Levano
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+  <script>
+    function filterProducts(category) {
+      const pills = document.querySelectorAll('.category-pill');
+      const products = document.querySelectorAll('.product-card');
+      
+      pills.forEach(pill => pill.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+/* ============================================
+   DLUCHO DESCARTABLES - PALETA PROFESIONAL
+   Productos Descartables y Soluciones para Negocios
+   ============================================ */
+
+:root {
+  /* Colores Profesionales y Corporativos */
+  --primary: #059669;      /* Verde profesional */
+  --secondary: #0284C7;    /* Azul corporativo */
+  --accent: #DC2626;       /* Rojo urgencia */
+  --bg: #F8FAFC;           /* Blanco limpio */
+  --bg-light: #F1F5F9;     /* Gris muy claro */
+  --card: #FFFFFF;         /* Blanco puro */
+  --text: #334155;         /* Gris oscuro */
+  --muted: #64748B;        /* Gris medio */
+  --blue: #059669;         /* Compatibilidad */
+  --orange: #0284C7;       /* Compatibilidad */
+  --success: #10B981;      /* Verde éxito */
+}
+
+/* Body limpio y profesional */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header corporativo */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--secondary), #0EA5E9);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+  box-shadow: 0 8px 32px rgba(5, 150, 105, 0.3);
+}
+
+/* Títulos profesionales */
+h1, h2, h3 {
+  color: var(--text);
+  text-shadow: none;
+  font-weight: 700;
+}
+
+/* Cards limpias y modernas */
+.card {
+  background: var(--card);
+  border: 1px solid rgba(5, 150, 105, 0.15);
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.08);
+  border-radius: 12px;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 12px 40px rgba(5, 150, 105, 0.2);
+  transform: translateY(-8px) rotate(1deg);
+}
+
+/* Botones profesionales */
+.btn {
+  background: linear-gradient(135deg, var(--primary), var(--success));
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 25px rgba(5, 150, 105, 0.5);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--secondary), #0EA5E9);
+}
+
+.btn-urgent {
+  background: linear-gradient(135deg, var(--accent), #EF4444);
+}
+
+/* Links corporativos */
+a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* Inputs limpios */
+input, textarea, select {
+  background: var(--card);
+  border: 2px solid rgba(5, 150, 105, 0.2);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(100, 116, 139, 0.5);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
+  background: white;
+}
+
+/* Footer corporativo */
+footer {
+  background: linear-gradient(135deg, #1E293B, #0F172A);
+  color: #E2E8F0;
+  border-top: 3px solid var(--primary);
+}
+
+.footer-links a {
+  color: #94A3B8;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* Hero profesional */
+.hero-descartables {
+  background: linear-gradient(135deg, 
+    rgba(5, 150, 105, 0.05) 0%, 
+    rgba(2, 132, 199, 0.05) 50%,
+    rgba(16, 185, 129, 0.05) 100%);
+  border: 2px solid rgba(5, 150, 105, 0.2);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-descartables::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(2, 132, 199, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Badges de categoría */
+.category-badge {
+  background: linear-gradient(135deg, var(--primary), var(--success));
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-badge.urgent {
+  background: linear-gradient(135deg, var(--accent), #EF4444);
+}
+
+.category-badge.premium {
+  background: linear-gradient(135deg, var(--secondary), #0EA5E9);
+}
+
+/* Grid de productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Cards de productos profesionales */
+.product-card {
+  background: var(--card);
+  border: 1px solid rgba(5, 150, 105, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--success));
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover::before {
+  transform: scaleY(1);
+}
+
+.product-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(5, 150, 105, 0.15);
+}
+
+/* Precio profesional */
+.price {
+  color: var(--primary);
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.price-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Pills de categorías */
+.category-pill {
+  background: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.category-pill:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, var(--primary), var(--success));
+  color: white;
+  border-color: var(--success);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Caja de características */
+.feature-box {
+  background: white;
+  border: 2px solid rgba(5, 150, 105, 0.2);
+  border-left: 5px solid var(--primary);
+  padding: 20px;
+  margin: 16px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.1);
+  transform: translateX(5px);
+}
+
+.feature-box h4 {
+  color: var(--primary);
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Banner promocional profesional */
+.promo-banner {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(5, 150, 105, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-banner::before {
+  content: '📦';
+  position: absolute;
+  font-size: 150px;
+  opacity: 0.1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.promo-banner h2 {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Badge de descuento */
+.discount-badge {
+  background: var(--accent);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+  text-transform: uppercase;
+}
+
+/* Etiqueta "Al por mayor" */
+.wholesale-badge {
+  background: var(--secondary);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Scrollbar profesional */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--success));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--success), var(--primary));
+}
+
+/* Selección */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Card de catálogo sin rotación */
+#catalog-pdf-section .card:hover {
+  transform: translateY(-8px);
+}
+
+/* Tabla de precios */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.price-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.price-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.1);
+}
+
+.price-table tr:hover {
+  background: rgba(5, 150, 105, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  
+  .price {
+    font-size: 22px;
+  }
+  
+  .hero-descartables {
+    border-radius: 12px;
+    padding: 24px 16px;
+  }
+}

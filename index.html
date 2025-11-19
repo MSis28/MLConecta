@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ML Conecta+ – Una sola familia</title>
+  <meta name="description" content="ML Conecta+ | Portal de la familia Moquillaza Levano – TEC Game Center, DKarmen Librería, DLucho Descartables, Juguetería DKarmen y J & M Moda Kids." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ML Conecta+ – Cinco ideas, una sola familia" />
+  <meta property="og:description" content="Red de emprendimientos de la familia Moquillaza Levano" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div class="logo-badge">ML Conecta+</div>
+        <div style="text-align:left">
+          <div style="font-weight:700">Cinco negocios, una sola familia.</div>
+          <div style="font-size:12px;opacity:0.9">Familia Moquillaza Levano</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Nuestra Historia</a>
+        <a href="#negocios">Negocios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#ubicaciones">Ubicaciones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="inicio">
+    <!-- Hero Section -->
+    <section aria-label="Hero" style="display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px;border-radius:16px;background:linear-gradient(180deg,rgba(0,123,255,0.08),rgba(88,24,163,0.03));text-align:center;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(0,123,255,0.1) 1px,transparent 1px);background-size:50px 50px;animation:float 20s linear infinite;pointer-events:none"></div>
+      
+      <div style="position:relative;z-index:1">
+        <h2 style="margin:0;font-size:clamp(24px,5vw,32px);color:var(--blue)">Bienvenido a ML Conecta+</h2>
+        <p style="margin:12px auto 0;max-width:820px;color:var(--muted)">
+          La red de emprendimientos de la familia Moquillaza Levano. Unidos por el trabajo, impulsados por la pasión. 
+          Encuentra tecnología, útiles escolares, juguetes educativos, productos descartables y moda infantil en un solo lugar.
+        </p><br>
+        <button class="btn" onclick="document.getElementById('negocios').scrollIntoView({behavior:'smooth'})">
+          Descubre nuestros negocios
+        </button>
+      </div>
+    </section>
+
+    <!-- Banner de Ofertas -->
+    <section class="offers-banner fade-in">
+      <div class="offer-content">
+        <div class="offer-badge">OFERTA ESPECIAL</div>
+        <h3 style="margin:0 0 8px;font-size:24px">¡Promociones de Temporada en Todos los Negocios!</h3>
+        <p style="margin:0 0 16px;font-size:16px;opacity:0.95">Descuentos exclusivos este mes. Consulta por WhatsApp</p>
+        <button class="btn" onclick="contactWhats('general')" style="background:white;color:#DC2626">
+          Ver Ofertas
+        </button>
+      </div>
+    </section>
+
+    <!-- Contador de Estadísticas -->
+    <section class="stats-section fade-in">
+      <div class="stat-box">
+        <div class="stat-number" data-target="10" data-counter>0</div>
+        <div class="stat-label">Años de Experiencia</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="5" data-counter>0</div>
+        <div class="stat-label">Negocios Familiares</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="1124" data-suffix="+" data-counter>0</div>
+        <div class="stat-label">Clientes Felices</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="2" data-counter>0</div>
+        <div class="stat-label">Ubicaciones</div>
+      </div>
+    </section>
+
+    <!-- Historia Section -->
+    <section id="historia" class="fade-in" style="margin-top:40px">
+      <div style="display:flex;gap:18px;flex-direction:column">
+        <div style="display:flex;flex-direction:column;gap:12px;padding:20px;border-radius:12px;background:var(--card);box-shadow:0 6px 18px rgba(15,23,42,0.04)">
+          <h3 style="color:var(--blue);text-align:center;margin:0 0 20px 0">Nuestra Línea de Tiempo</h3>
+          
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+            <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:10px;border-top:4px solid var(--blue)">
+              <h4 style="margin:0;color:var(--blue);font-size:32px">2013</h4>
+              <div class="muted" style="font-weight:600;margin-top:8px">Librería DKarmen</div>
+              <div class="small" style="margin-top:4px">Inicia la aventura con material educativo y papelería.</div>
+            </div>
+            
+            <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:10px;border-top:4px solid var(--orange)">
+              <h4 style="margin:0;color:var(--orange);font-size:32px">2015</h4>
+              <div class="muted" style="font-weight:600;margin-top:8px">Juguetería DKarmen</div>
+              <div class="small" style="margin-top:4px">Juguetes, diversión y aprendizaje para los más pequeños.</div>
+            </div>
+            
+            <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:10px;border-top:4px solid var(--accent)">
+              <h4 style="margin:0;color:var(--accent);font-size:32px">2020</h4>
+              <div class="muted" style="font-weight:600;margin-top:8px">Descartables DLucho</div>
+              <div class="small" style="margin-top:4px">Productos descartables para negocios y eventos.</div>
+            </div>
+            
+            <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:10px;border-top:4px solid #7C3AED">
+              <h4 style="margin:0;color:#7C3AED;font-size:32px">2023</h4>
+              <div class="muted" style="font-weight:600;margin-top:8px">TEC Game Center</div>
+              <div class="small" style="margin-top:4px">Artículos de tecnología y consolas de videojuegos.</div>
+            </div>
+            
+            <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:10px;border-top:4px solid #DB2777">
+              <h4 style="margin:0;color:#DB2777;font-size:32px">2025</h4>
+              <div class="muted" style="font-weight:600;margin-top:8px">J & M Moda Kids</div>
+              <div class="small" style="margin-top:4px">Moda infantil con estilo y comodidad.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="text-align:justify">
+          <h3 style="margin:0 0 12px 0;color:var(--blue)">Nuestra Historia</h3>
+          <p style="color:var(--muted);line-height:1.7;margin:0">
+            La familia <strong>Moquillaza Levano</strong> es sinónimo de esfuerzo, unión y visión emprendedora.
+            Cada integrante aporta su talento para ofrecer lo mejor desde su rubro: educación, tecnología, moda y soluciones prácticas.
+            ML Conecta+ nace para unir estos emprendimientos bajo un mismo propósito: <strong>crecer juntos para servir mejor</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Negocios Section -->
+    <section id="negocios" class="fade-in" style="margin-top:40px">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:24px">Negocios Generales</h2>
+
+      <div class="grid-5">
+        <div class="card" onclick="openModal('tec')">
+          <div class="icon">🎮</div>
+          <h3>TEC Game Center</h3>
+          <p class="muted">Tecnología, videojuegos y entretenimiento.</p>
+          <div style="margin-top:12px">
+            <span class="btn" style="display:inline-block;padding:8px 16px;font-size:13px">Conoce más</span>
+          </div>
+        </div>
+          
+        <div class="card" onclick="openModal('dkarmen')">
+          <div class="icon">📚</div>
+          <h3>Librería DKarmen</h3>
+          <p class="muted">Libros, útiles escolares y papelería.</p>
+          <div style="margin-top:12px">
+            <span class="btn" style="display:inline-block;padding:8px 16px;font-size:13px">Conoce más</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="openModal('dlucho')">
+          <div class="icon">🍽️</div>
+          <h3>Descartables DLucho</h3>
+          <p class="muted">Artículos descartables y soluciones para eventos.</p>
+          <div style="margin-top:12px">
+            <span class="btn" style="display:inline-block;padding:8px 16px;font-size:13px">Conoce más</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="openModal('jugueteria')">
+          <div class="icon">🧸</div>
+          <h3>Juguetería DKarmen</h3>
+          <p class="muted">Juguetes creativos y educativos para todas las edades.</p>
+          <div style="margin-top:12px">
+            <span class="btn" style="display:inline-block;padding:8px 16px;font-size:13px">Conoce más</span>
+          </div>
+        </div>
+
+        <div class="card" onclick="openModal('jm')">
+          <div class="icon">👕</div>
+          <h3>J&M Moda Kids</h3>
+          <p class="muted">Moda infantil con estilo y color para los más pequeños.</p>
+          <div style="margin-top:12px">
+            <span class="btn" style="display:inline-block;padding:8px 16px;font-size:13px">Conoce más</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por Qué Elegirnos -->
+    <section class="why-us-section fade-in">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:8px">¿Por Qué ML Conecta+?</h2>
+      <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 32px">
+        Somos más que negocios, somos una familia comprometida con tu satisfacción
+      </p>
+      
+      <div class="why-us-grid">
+        <div class="why-us-card">
+          <span class="why-us-icon">👨‍👩‍👧‍👦</span>
+          <div class="why-us-title">Múltiples Negocios</div>
+          <p class="why-us-text">Atención personalizada con el cariño y dedicación de una familia</p>
+        </div>
+        
+        <div class="why-us-card">
+          <span class="why-us-icon">✅</span>
+          <div class="why-us-title">Calidad Garantizada</div>
+          <p class="why-us-text">Productos seleccionados de las mejores marcas</p>
+        </div>
+        
+        <div class="why-us-card">
+          <span class="why-us-icon">🎯</span>
+          <div class="why-us-title">Variedad Completa</div>
+          <p class="why-us-text">5 negocios para todas tus necesidades</p>
+        </div>
+        
+        <div class="why-us-card">
+          <span class="why-us-icon">📍</span>
+          <div class="why-us-title">Ubicaciones Céntricas</div>
+          <p class="why-us-text">Locales en Pueblo Nuevo - Chincha</p>
+        </div>
+      </div>
+    </section>
+
+ <!-- Galería -->
+<section id="galeria" class="fade-in" style="margin-top:40px">
+  <h2 style="color:var(--blue);text-align:center;margin-bottom:20px">📸 Galería General</h2>
+  
+  <div class="grid-4">
+    <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/fachada.jpeg')">
+      <img src="img/galeria/fachada.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#f093fb,#f5576c);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/jugueteria.jpeg')">
+      <img src="img/galeria/jugueteria.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#4facfe,#00f2fe);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/jugueteria2025.jpeg')">
+      <img src="img/galeria/jugueteria2025.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/juguetes2025.jpeg')">
+      <img src="img/galeria/juguetes2025.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#fa709a,#fee140);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/utiles.jpeg')">
+      <img src="img/galeria/utiles.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#30cfd0,#330867);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/descartables.jpeg')">
+      <img src="img/galeria/descartables.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#a8edea,#fed6e3);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/tecnologia.jpeg')">
+      <img src="img/galeria/tecnologia.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="background:linear-gradient(135deg,#ff9a9e,#fecfef);border-radius:12px;height:160px;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="openLightbox('img/galeria/libreria.jpeg')">
+      <img src="img/galeria/libreria.jpeg" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal de la Galeria-->
+<div id="lightbox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;justify-content:center;align-items:center" onclick="closeLightbox()">
+  <span style="position:absolute;top:20px;right:40px;color:white;font-size:40px;font-weight:bold;cursor:pointer" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" style="max-width:90%;max-height:90%;object-fit:contain;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.5)">
+</div>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials-section fade-in">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:8px">Lo Que Dicen Nuestros Clientes</h2>
+      <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto">
+        La satisfacción de nuestros clientes es nuestro mejor logro
+      </p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Excelente atención en todos los negocios de la familia. Siempre encuentro lo que busco y los precios son justos."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MG</div>
+            <div>
+              <div class="testimonial-name">María Gonzales</div>
+              <div class="testimonial-business">Cliente de DKarmen Librería</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "TEC Game Center tiene los mejores precios en consolas. Me asesoraron muy bien y el servicio post-venta es excelente."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CP</div>
+            <div>
+              <div class="testimonial-name">Carlos Pérez</div>
+              <div class="testimonial-business">Cliente de TEC Game Center</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Compro todos los útiles escolares de mis hijos en DKarmen. Muy buena calidad y siempre tienen todo en stock."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AL</div>
+            <div>
+              <div class="testimonial-name">Ana López</div>
+              <div class="testimonial-business">Cliente de DKarmen Librería</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Siempre compro descartables en DLucho. Los mejores precios para mis eventos o actividades."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JR</div>
+            <div>
+              <div class="testimonial-name">José Ramírez</div>
+              <div class="testimonial-business">Cliente de DLucho Descartables</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Los juguetes de Juguetería DKarmen son de excelente calidad. Mis hijos están felices con sus regalos."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LM</div>
+            <div>
+              <div class="testimonial-name">Lucía Martínez</div>
+              <div class="testimonial-business">Cliente de Juguetería DKarmen</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "J & M Moda Kids tiene ropa hermosa para niños. Diseños únicos y a buen precio. ¡Totalmente recomendado!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PS</div>
+            <div>
+              <div class="testimonial-name">Patricia Silva</div>
+              <div class="testimonial-business">Cliente de J & M Moda Kids</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ubicaciones con Mapa -->
+    <section id="ubicaciones" class="locations-section fade-in">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:8px">📍 Encuéntranos</h2>
+      <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto">
+        Visítanos en nuestras ubicaciones en el distrito de Pueblo Nuevo - Chincha - Ica
+      </p>
+      
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.182080397684!2d-76.12895622577788!3d-13.401049668591137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91101700580003c5%3A0x1c84395ae7abfcb0!2sML%20Conecta%2B!5e0!3m2!1ses!2spe!4v1762226479373!5m2!1ses!2spe"
+          width="100%" 
+          height="400" 
+          style="border:0" 
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      
+      <div class="locations-list">
+        <div class="location-item">
+          <div class="location-name">🎮 TEC Game Center</div>
+          <div class="location-address">Av Oscar R. Benavides 995 - Pueblo Nuevo - Chincha</div>
+        </div>
+        
+        <div class="location-item">
+          <div class="location-name">📚 DKarmen Librería</div>
+          <div class="location-address">Av Oscar R. Benavides 991 - Pueblo Nuevo - Chincha</div>
+        </div>
+        
+        <div class="location-item">
+          <div class="location-name">🍽️ DLucho Descartables</div>
+          <div class="location-address">Av Oscar R. Benavides 991 - Pueblo Nuevo - Chincha</div>
+        </div>
+        
+        <div class="location-item">
+          <div class="location-name">🧸 Juguetería DKarmen</div>
+          <div class="location-address">Av Oscar R. Benavides 995 - Pueblo Nuevo - Chincha</div>
+        </div>
+        
+        <div class="location-item">
+          <div class="location-name">👕 J & M Moda Kids</div>
+          <div class="location-address">Av Oscar R. Benavides 995 - Pueblo Nuevo - Chincha</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ 
+    <section class="faq-section fade-in">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:8px">❓ Preguntas Frecuentes</h2>
+      <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 32px">
+        Resolvemos tus dudas más comunes
+      </p>
+      
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          ¿Hacen delivery?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Sí, hacemos delivery en Chincha Alta, Pueblo Nuevo y zonas cercanas. Los costos varían según la distancia. Consulta disponibilidad por WhatsApp.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          ¿Cuáles son los horarios de atención?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          La mayoría de nuestros negocios atienden de Lunes a Sábado de 9:00 AM a 7:00 PM. Los horarios específicos de cada negocio están en sus páginas individuales.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          ¿Aceptan todas las formas de pago?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Aceptamos efectivo, transferencias bancarias y Yape/Plin. Algunos negocios también aceptan tarjetas de crédito/débito.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          ¿Tienen garantía los productos?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Sí, todos nuestros productos cuentan con garantía. Los productos tecnológicos tienen garantía del fabricante. Para otros artículos, consulta las políticas específicas.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          ¿Hacen ventas al por mayor?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          DLucho Descartables ofrece precios especiales al por mayor. Los demás negocios pueden ofrecer descuentos en compras grandes. Contáctanos para cotizaciones.
+        </div>
+      </div>
+    </section>
+    -->
+
+     <!-- Contacto y Ubicaciones - LADO A LADO -->
+    <section id="contacto" class="fade-in contact-ubicaciones-container">
+      <h2 style="color:var(--blue);text-align:center;margin-bottom:24px;grid-column:1/-1">Contáctanos</h2>
+
+      <!-- FORMULARIO DE CONTACTO -->
+      <div class="form contact-form-section">
+        <div style="display:grid;grid-template-columns:1fr;gap:0">
+          <div>
+            <label>Nombre</label>
+            <input id="name" type="text" placeholder="Tu nombre completo" required />
+          </div>
+
+          <div>
+            <label>Correo o teléfono</label>
+            <input id="contact" type="text" placeholder="correo@ejemplo.com o +51 9XXXXXXXX" required />
+          </div>
+
+          <div>
+            <label>Negocio de interés</label>
+            <select id="biz">
+              <option value="TEC Game Center">TEC Game Center</option>
+              <option value="DKarmen Librería">DKarmen Librería</option>
+              <option value="DLucho Descartables">DLucho Descartables</option>
+              <option value="Juguetería DKarmen">Juguetería DKarmen</option>
+              <option value="J & M Moda Kids">J & M Moda Kids</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Mensaje</label>
+            <textarea id="message" placeholder="Escribe tu mensaje..." rows="4" required></textarea>
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+            <button class="btn" onclick="sendForm()" style="flex:1;min-width:150px">
+              📧 Enviar mensaje
+            </button>
+            <button class="btn btn-success" onclick="contactWhats('general')" style="flex:1;min-width:150px">
+              💬 WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTOS -->
+      <div class="card locations-info-section">
+        <h3 style="margin:0 0 16px 0;color:var(--blue)">📍 Nuestros Contactos</h3>
+        <div style="display:grid;grid-template-columns:1fr;gap:16px">
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:4px">🎮 TEC Game Center - 900281884</div>
+            <div class="small">Av Oscar R. Benavides 995 - Pueblo Nuevo - Chincha</div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:4px">📚 DKarmen Librería - 900281884</div>
+            <div class="small">Av Oscar R. Benavides 991 - Pueblo Nuevo - Chincha</div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:4px">🍽️ DLucho Descartables - 900281884</div>
+            <div class="small">Av Oscar R. Benavides 991 - Pueblo Nuevo - Chincha</div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:4px">🧸 Juguetería DKarmen - 900281884</div>
+            <div class="small">PAv Oscar R. Benavides 995 - Pueblo Nuevo - Chincha</div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:4px">👕 J & M Moda Kids - 900281884</div>
+            <div class="small">Av Oscar R. Benavides 995 - Pueblo Nuevo - Chincha</div>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:16px;font-size:12px">
+          Horarios disponibles en los perfiles de cada negocio. Envíos a todo el Perú.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Botón de Llamada Móvil -->
+  <a href="tel:+51900281884" class="call-btn-mobile">
+    📞 Llamar Ahora
+  </a>
+
+  <!-- WhatsApp Flotante -->
+  <button aria-label="WhatsApp" class="whatsapp-btn" onclick="contactWhats('general')">
+    💬 WhatsApp
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="font-weight:700;font-size:18px;margin-bottom:12px">
+        ML Conecta+ – Familia Moquillaza Levano
+      </div>
+
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#negocios">Negocios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#ubicaciones">Ubicaciones</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;color:#94a3b8">
+        © 2025 Familia Moquillaza Levano. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
